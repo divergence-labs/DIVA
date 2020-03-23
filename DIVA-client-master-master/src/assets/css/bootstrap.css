@@ -1,0 +1,344 @@
+/* Import */
+/* Variables */
+/* Base */
+body {
+  font-size: 16px;
+  display: flex;
+  justify-content: center; 
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  height: 100vh;
+  background: #212121;
+}
+
+.center { 
+  height: 50vh;
+  position: relative;
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#tagline {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: white;
+}
+#taglinetext {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 1em;
+  color: white;
+}
+strong {
+  font-weight: 600;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2.4em;
+}
+#content {
+  margin-top: 50px;
+  text-align: center;
+}
+/* Timeline Left */
+.timeline_left {
+  float: left;
+  color: greenyellow;
+  font-family: 'Chivo', sans-serif;
+  margin: 50px auto;
+  text-align: center;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+  max-width: 10%;
+}
+.timeline_left h1 {
+  font-family: 'Saira', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 1.4em;
+}
+.timeline_left h2,
+.timeline_left h3 {
+  font-family: 'Saira', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  font-size: 1.4em;
+}
+.timeline_left .event_left {
+  padding-bottom: 15px;
+  margin-left:150px; 
+  margin-bottom: 20px;
+  position: relative;
+  animation-delay: 0.25s;
+}
+.timeline_left .event_left:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+.timeline_left .event_left:before,
+.timeline_left .event_left:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.timeline_left .event_left:before {
+  left: -217.5px;
+  color: rgba(255, 255, 255, 0.4);
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 100;
+  font-size: 0.9em;
+  min-width: 120px;
+  font-family: 'Saira', sans-serif;
+}
+.timeline_left .event_left:after {
+  left: -57.85px;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 4px solid blue;
+ 
+  background: rgba(22, 22, 22, 0.75);
+  color: lightyellow;
+  font-family: 'Chivo', sans-serif;
+  margin: 50px auto;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+  max-width: 50%;
+}
+.timeline h1 {
+  font-family: 'Saira', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 1.4em;
+}
+.timeline h2,
+.timeline h3 {
+  font-family: 'Saira', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  font-size: 1.4em;
+}
+.timeline .event {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  animation-delay: 0.25s;
+}
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.timeline .event:before {
+  left: -217.5px;
+  color: lime;
+  text-align: right;
+  font-weight: 100;
+  font-size: 0.9em;
+  min-width: 120px;
+  font-family: 'Saira', sans-serif;
+}
+.timeline .event:after {
+  left: -57.85px;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+
+
+#video {
+  border-left: 4px solid blue;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background: rgba(224, 224, 224, 0.03);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Courier New', Courier, monospace;
+  margin: 50px auto;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+  max-width: 100%;
+    }
+    #canvas {
+        display: none;
+    }
+   .mainList{
+    width: 80%; position: absolute; text-align:center;
+    
+   }
+   .maindiv{
+    padding:10px;
+   }
+
+   @keyframes quiet {
+    25% {
+      transform: scaleY(0.6);
+    }
+    50% {
+      transform: scaleY(0.4);
+    }
+    75% {
+      transform: scaleY(0.8);
+    }
+  }
+  @keyframes normal {
+    25% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.4);
+    }
+    75% {
+      transform: scaleY(0.6);
+    }
+  }
+  @keyframes loud {
+    25% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.4);
+    }
+    75% {
+      transform: scaleY(1.2);
+    }
+  }
+  
+  .dot {
+    background: blue;
+  }
+  .dot, .dot:after {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    animation: a 1.5s calc(((var(--i) + var(--o, 0))/var(--n) - 1)*1.5s) infinite;
+  }
+  .dot:after {
+    --o: 1;
+    background: #212121;
+    content: '';
+  }
+  @keyframes a {
+    0%, 50% {
+      transform: scale(0);
+    }
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.maincontent {
+    position: relative;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+.img_content{
+    right: 0;
+    left: 0;
+  text-align: center;
+}
+.angrytext {
+ 
+  -webkit-animation-name: zoom-in-out;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+ 
+  animation-name: zoom-in-out;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+ 
+ }
+ 
+ @-webkit-keyframes zoom-in-out {
+   0%{
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   }
+   50%{
+   -webkit-transform: scale(1.2);
+   transform: scale(1.2);
+   }
+   100%{
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   }
+ }
+ 
+ @keyframes zoom-in-out {
+   0%{
+   -ms-transform: scale(1);
+   transform: scale(1);
+   }
+   50%{
+   -ms-transform: scale(1.2);
+   transform: scale(1.2);
+   }
+   100%{
+   -ms-transform: scale(1);
+   transform: scale(1);
+   }
+ }
